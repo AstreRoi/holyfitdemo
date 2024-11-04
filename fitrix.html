@@ -5,17 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>피트릭스 - 홀리핏</title>
     <link rel="stylesheet" href="style.css">
+    <script src="fitrix.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <!-- Hero Section -->
+        <header class="hero-section">
             <h1>피트릭스</h1>
-            <nav><a href="index.html">홈으로 돌아가기</a></nav>
+            <p>이상적인 신체 라인을 위한 맞춤형 피트니스 프로그램</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="signup.html">회원가입</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <h2>피트릭스 운동 프로그램</h2>
-            <p>피트릭스는 개개인의 목표와 체력에 맞춘 프로그램으로, 지속적인 기록을 통해 진척도를 추적할 수 있습니다. 피트릭스와 함께 건강한 습관을 만들어 보세요.</p>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section class="intro">
+                <h2>신체 라인 분석</h2>
+                <p>이상적인 신체 비율과 비교하여 개선이 필요한 부분과 추천 운동을 확인하세요.</p>
+            </section>
+
+            <!-- 사용자 신체 치수 입력 -->
+            <section class="cards">
+                <div class="card body-input">
+                    <h3>신체 치수 입력</h3>
+                    <button onclick="fetchBodyLineData()" class="btn">장비에서 데이터 가져오기</button>
+                    <label for="chest">가슴 둘레 (cm):</label>
+                    <input type="number" id="chest" placeholder="예: 90cm">
+
+                    <label for="waist">허리 둘레 (cm):</label>
+                    <input type="number" id="waist" placeholder="예: 70cm">
+
+                    <label for="hips">엉덩이 둘레 (cm):</label>
+                    <input type="number" id="hips" placeholder="예: 95cm">
+
+                    <button onclick="analyzeBodyLine()" class="btn">분석 시작</button>
+                </div>
+            </section>
+
+            <!-- 분석 결과 및 추천 운동 -->
+            <section class="feedback">
+                <div class="card analysis-results">
+                    <h3>분석 결과</h3>
+                    <p id="analysisResult">여기에 분석 결과가 표시됩니다.</p>
+                </div>
+                <div class="card exercise-recommendation">
+                    <h3>추천 운동</h3>
+                    <p id="exerciseRecommendation">여기에 추천 운동이 표시됩니다.</p>
+                </div>
+            </section>
         </main>
+
+        <!-- Footer -->
         <footer>
             <p>© 2024 홀리핏. All rights reserved.</p>
         </footer>

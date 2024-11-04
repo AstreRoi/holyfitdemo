@@ -28,23 +28,58 @@ body {
     background: linear-gradient(to bottom right, #FF8364, #FFB677);
     color: white;
     border-radius: 15px;
+    position: relative;
 }
 
+/* 중앙 제목 및 설명 */
 .hero-section h1 {
     font-size: 3em;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .hero-section p {
     font-size: 1.2em;
-    margin-bottom: 30px;
 }
 
+/* 로그인/회원가입 버튼 스타일 */
+.auth-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.auth-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background 0.3s ease;
+}
+
+.auth-links a:hover {
+    background-color: #eee;
+}
+
+.signup-button {
+    background-color: #FF8364;
+    color: white;
+}
+
+.signup-button:hover {
+    background-color: #FF7043;
+}
+
+/* 중앙 정렬된 네비게이션 스타일 */
 .nav-links {
     display: flex;
     justify-content: center;
     gap: 15px;
     list-style-type: none;
+    margin-top: 20px;
 }
 
 .nav-links a {
@@ -125,6 +160,215 @@ body {
 }
 
 /* 푸터 스타일 */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* 중앙 정렬 및 레이아웃 스타일 */
+.content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.inbody-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.inbody-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inbody-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inbody-field label {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.inbody-field input {
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+/* 버튼 스타일 */
+.btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #FF8364;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #FF7043;
+}
+/* 기본 스타일 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #FF8364, #FFB677);
+    color: white;
+    border-radius: 15px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    color: #FF8364;
+    margin-bottom: 10px;
+}
+
+/* 카드 섹션 */
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #FF8364;
+    margin-bottom: 10px;
+}
+
+.card label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.card input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 피드백 섹션 */
+.feedback {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feedback .card {
+    width: 400px;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+#analysisResult, #exerciseRecommendation {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 버튼 스타일 */
+.btn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #FF8364;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #FF7043;
+}
+
+/* 푸터 */
 footer {
     text-align: center;
     margin-top: 40px;

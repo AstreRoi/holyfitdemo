@@ -5,17 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>식사 - 홀리핏</title>
     <link rel="stylesheet" href="style.css">
+    <script src="nutrition.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <!-- Hero Section -->
+        <header class="hero-section">
             <h1>식사</h1>
-            <nav><a href="index.html">홈으로 돌아가기</a></nav>
+            <p>건강한 식단으로 체력과 면역력을 강화하세요.</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="signup.html">회원가입</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <h2>영양과 식단 관리</h2>
-            <p>균형 잡힌 식단은 건강한 체형을 유지하는 데 필수적입니다. 홀리핏은 목표에 맞춘 식단을 제공해 영양을 관리할 수 있도록 돕습니다.</p>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section class="intro">
+                <h2>영양과 식단 관리</h2>
+                <p>개인 맞춤형 식단을 통해 건강을 관리하세요.</p>
+            </section>
+
+            <!-- 관리자 영양소 목표 설정 및 식단 제공 -->
+            <section class="cards">
+                <div class="card">
+                    <h3>영양소 목표 설정 (관리자)</h3>
+                    <label for="proteinGoal">단백질 (g):</label>
+                    <input type="number" id="proteinGoal" placeholder="예: 50g">
+                    
+                    <label for="carbsGoal">탄수화물 (g):</label>
+                    <input type="number" id="carbsGoal" placeholder="예: 250g">
+                    
+                    <label for="fatsGoal">지방 (g):</label>
+                    <input type="number" id="fatsGoal" placeholder="예: 70g">
+                    
+                    <button onclick="setGoals()" class="btn">영양 목표 설정</button>
+                    <p id="goalMessage"></p>
+                </div>
+
+                <!-- 관리자 식단 제공 -->
+                <div class="card">
+                    <h3>추천 식단 (관리자)</h3>
+                    <p>예시: 닭가슴살 100g (단백질 30g, 탄수화물 0g, 지방 3g)</p>
+                    <p>예시: 밥 200g (단백질 4g, 탄수화물 45g, 지방 0g)</p>
+                    <p>예시: 아보카도 50g (단백질 1g, 탄수화물 3g, 지방 7g)</p>
+                </div>
+            </section>
+
+            <!-- 사용자 식단 기록 -->
+            <section class="cards">
+                <div class="card">
+                    <h3>오늘의 식단 기록 (사용자)</h3>
+                    <label for="protein">단백질 (g):</label>
+                    <input type="number" id="protein" placeholder="단백질 입력">
+
+                    <label for="carbs">탄수화물 (g):</label>
+                    <input type="number" id="carbs" placeholder="탄수화물 입력">
+
+                    <label for="fats">지방 (g):</label>
+                    <input type="number" id="fats" placeholder="지방 입력">
+
+                    <button onclick="addRecord()" class="btn">식단 기록 추가</button>
+                    <p id="recordMessage"></p>
+                </div>
+            </section>
+
+            <!-- 피드백 -->
+            <section class="feedback">
+                <h3>피드백</h3>
+                <p id="feedbackMessage">여기에 피드백이 표시됩니다.</p>
+            </section>
         </main>
+
+        <!-- Footer -->
         <footer>
             <p>© 2024 홀리핏. All rights reserved.</p>
         </footer>

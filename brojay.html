@@ -3,19 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>브로제이 - 홀리핏</title>
+    <title>브로제이 - 홀리핏 방문 관리</title>
     <link rel="stylesheet" href="style.css">
+    <script src="brojay.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <!-- Hero Section -->
+        <header class="hero-section">
             <h1>브로제이</h1>
-            <nav><a href="index.html">홈으로 돌아가기</a></nav>
+            <p>홀리핏 방문 관리 시스템</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="signup.html">회원가입</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <h2>브로제이 운동 프로그램</h2>
-            <p>브로제이는 여러분의 근력과 유연성을 향상시킬 수 있도록 설계된 맞춤형 운동 프로그램입니다. 전문가들이 직접 설계하여 효과적으로 체력을 기를 수 있으며, 다양한 레벨에 맞춰 쉽게 따라할 수 있습니다.</p>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section class="intro">
+                <h2>방문 횟수 관리</h2>
+                <p>키오스크를 통해 체크인하여 방문 횟수를 기록하세요.</p>
+            </section>
+
+            <!-- Check-in Section for Users -->
+            <section class="cards">
+                <!-- Admin Update Section -->
+                <div class="card">
+                    <h3>방문 횟수 업데이트 (관리자)</h3>
+                    <p>특정 사용자의 방문 횟수를 업데이트하세요.</p>
+                    <input type="text" id="adminUserId" placeholder="사용자 ID 입력">
+                    <input type="number" id="visitCount" placeholder="방문 횟수 입력">
+                    <button onclick="updateVisitCount()" class="btn">업데이트</button>
+                </div>
+
+                <div class="card">
+                    <h3>체크인 (사용자)</h3>
+                    <p>사용자 ID를 입력하고 체크인 버튼을 눌러 방문 횟수를 기록하세요.</p>
+                    <input type="text" id="userId" placeholder="사용자 ID 입력">
+                    <button onclick="checkIn()" class="btn">체크인</button>
+                </div>
+            </section>
+
+            <!-- Visit Information Display -->
+            <section id="visit-info" class="intro">
+                <h2>방문 횟수 정보</h2>
+                <p id="visitMessage">여기에 사용자의 방문 횟수가 표시됩니다.</p>
+            </section>
         </main>
+
+        <!-- Footer -->
         <footer>
             <p>© 2024 홀리핏. All rights reserved.</p>
         </footer>
