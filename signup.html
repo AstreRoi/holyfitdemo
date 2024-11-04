@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - 홀리핏</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script> <!-- CDN 추가 -->
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>회원가입</h1>
+            <nav><a href="index.html">홈으로 돌아가기</a></nav>
+        </header>
+
+        <main>
+            <h2>홀리핏 회원가입</h2>
+            <p>홀리핏에 회원가입하여 다양한 서비스를 이용해보세요!</p>
+            <form id="signupForm" action="submit_signup" method="post">
+                <label for="username">사용자 이름:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">이메일:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">비밀번호:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm_password">비밀번호 확인:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+
+                <button type="submit">회원가입</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>© 2024 홀리핏. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
