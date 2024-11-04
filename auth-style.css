@@ -1,0 +1,117 @@
+/* 기본 스타일 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FF8364, #FFB677);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* 인증 컨테이너 */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* 제목 스타일 */
+.auth-card h1 {
+    font-size: 2.2em;
+    color: #FF8364;
+    margin-bottom: 15px;
+}
+
+.auth-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+/* 폼 필드 스타일 */
+form label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+form input:focus {
+    box-shadow: 0 0 5px rgba(255, 131, 100, 0.8);
+}
+
+/* 버튼 스타일 */
+.btn {
+    padding: 12px 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #FF8364;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF7043;
+}
+
+/* 리디렉션 텍스트 */
+.redirect {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.redirect a {
+    color: #FF8364;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redirect a:hover {
+    text-decoration: underline;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
